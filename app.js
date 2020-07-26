@@ -21,10 +21,7 @@ mongoose.connect(url, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
-// mongoose.connect("mongodb+srv://szaidi05:abbas786@cluster0.jwi8j.mongodb.net/yelp_camp?retryWrites=true&w=majority", {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// });
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
