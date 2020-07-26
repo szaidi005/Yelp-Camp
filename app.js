@@ -15,15 +15,16 @@ seedDB = require("./seeds");
 var commentRoutes = require("./routes/comments"),
   campgroundRoutes = require("./routes/campgrounds"),
   indexRoutes = require("./routes/index");
-  
-// mongoose.connect("mongodb://localhost:27017/yelp_camp_v2", {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// });
-mongoose.connect("mongodb+srv://szaidi05:abbas786@cluster0.jwi8j.mongodb.net/yelp_camp?retryWrites=true&w=majority", {
+ 
+ 
+mongoose.connect(process.env.DATABASEURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+// mongoose.connect("mongodb+srv://szaidi05:abbas786@cluster0.jwi8j.mongodb.net/yelp_camp?retryWrites=true&w=majority", {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
